@@ -1,0 +1,61 @@
+equipment:
+  - element: "Centrala nawiewno-wywiewna"
+    keywords: ["komfovent", "domekt"]
+    model_regex: ["domekt[-_/a-z0-9]+", "cf[-_/a-z0-9]+"]
+  - element: "Kurtyna powietrzna"
+    keywords: ["kurtyna powietrzna", "wing", "vts"]
+    model_regex: ["wing\\s*[a-z0-9\\-/]+"]
+  - element: "Wentylator kanałowy"
+    keywords: ["wentylator kanałowy", "rm ", "ml pro", "ventilator", "вентилятор канальный"]
+    model_regex: ["rm\\s*\\d{2,3}/\\d{2,4}\\s*ec", "ml\\s*pro\\s*\\d{2,3}/\\d{2,4}\\s*ec"]
+  - element: "Wentylator kuchenny"
+    keywords: ["cookvent", "kuchenny"]
+    model_regex: ["cookvent\\s*eco\\s*\\d{2,3}/\\d{3,4}t"]
+  - element: "Nagrzewnica kanałowa elektryczna"
+    keywords: ["nagrzewnica kanałowa elektryczna", "harmann", "hcd"]
+    model_regex: ["hcd\\s*[a-z0-9\\-/]+"]
+  - element: "Kaseta klimatyzacyjna"
+    keywords: ["kaseta klimatyzacyjna", "aux", "m-c"]
+    model_regex: ["aux\\s*m-?c\\d{2}/[il]"]
+  - element: "Klimatyzator kanałowy"
+    keywords: ["klimatyzator kanałowy", "aux", "m-d"]
+    model_regex: ["aux\\s*m-?d\\d{2}/[il]"]
+  - element: "FILTR"
+    keywords: ["filtr", "filter", "фильтр"]
+    model_regex: ["f\\d{1,2}"]
+fittings:
+  - element: "Kolano 90°"
+    keywords: ["kolano 90", "elbow 90", "колено 90"]
+    size_regex: ["ø\\s?\\d{2,4}", "\\d{2,4}x\\d{2,4}"]
+  - element: "Kolano 45°"
+    keywords: ["kolano 45", "elbow 45", "колено 45"]
+    size_regex: ["ø\\s?\\d{2,4}", "\\d{2,4}x\\d{2,4}"]
+  - element: "Trójnik"
+    keywords: ["trójnik", "tee", "тройник"]
+    size_regex: ["ø\\s?\\d{2,4}(\\/|\\s*→\\s*|,|\\s*\\/\\s*)?ø?\\s?\\d{2,4}", "\\d{2,4}x\\d{2,4}"]
+  - element: "Redukcja"
+    keywords: ["redukc", "редукц", "reduction"]
+    size_regex: ["ø\\s?\\d{2,4}\\s*(→|->)\\s*ø\\s?\\d{2,4}", "\\d{2,4}x\\d{2,4}\\s*(→|->)\\s*\\d{2,4}x\\d{2,4}"]
+  - element: "Przejście okrągłe–prostokątne"
+    keywords: ["przejście", "переход"]
+    size_regex: ["ø\\s?\\d{2,4}\\s*(→|->)\\s*\\d{2,4}x\\d{2,4}", "\\d{2,4}x\\d{2,4}\\s*(→|->)\\s*ø\\s?\\d{2,4}"]
+  - element: "Przepustnica regulacyjna"
+    keywords: ["przepustnica", "дроссель", "damper"]
+    size_regex: ["ø\\s?\\d{2,4}", "\\d{2,4}x\\d{2,4}"]
+  - element: "Klapa zwrotna"
+    keywords: ["klapa zwrotna", "обратн", "check valve"]
+    size_regex: ["ø\\s?\\d{2,4}", "\\d{2,4}x\\d{2,4}"]
+  - element: "Tłumik akustyczny"
+    keywords: ["tłumik", "шумоглуш", "silencer"]
+    size_regex: ["ø\\s?\\d{2,4}\\s*/\\s*\\d{2,5}"]
+  - element: "Kratka/Anemostat/Wywiewnik"
+    keywords: ["kratka", "anemostat", "wywiewnik", "решет", "диффузор"]
+    size_regex: ["\\b\\d{2,4}x\\d{2,4}\\b", "zw\\s*\\d{2,3}"]
+sizes:
+  round: ["ø\\s?(\\d{2,4})(?!\\s*/)", "phi\\s?(\\d{2,4})"]
+  rect: ["\\b(\\d{2,4})\\s*[x×]\\s*(\\d{2,4})\\b"]
+ranges:
+  round_min: 80
+  round_max: 800
+  rect_min: 75
+  rect_max: 1500
